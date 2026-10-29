@@ -1,5 +1,5 @@
-numpy
+streamlit
 pandas
-seaborn
+numpy
 scikit-learn
-xgboost
+xgboost==2.1.1
