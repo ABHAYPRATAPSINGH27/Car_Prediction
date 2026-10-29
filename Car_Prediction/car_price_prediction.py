@@ -11,8 +11,14 @@ def main():
         <h1>Car Price Prediction</h1>
     """
 
-    model = xgb.XGBRegressor()
-    model.load_model("xgb_model.json")
+   import os
+import xgboost as xgb
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "xgb_model.json")
+
+model = xgb.XGBRegressor()
+model.load_model(MODEL_PATH)
 
     st.markdown(html_temp, unsafe_allow_html=True)
 
